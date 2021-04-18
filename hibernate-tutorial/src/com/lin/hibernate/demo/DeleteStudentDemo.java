@@ -28,7 +28,7 @@ public class DeleteStudentDemo {
 			System.out.println("Getting student with id: " + studentId);
 			Student myStudent = session.get(Student.class, studentId);
 			
-			System.out.println("deletting student ...");
+			System.out.println("deleting student ...");
             session.delete(myStudent);	
             
 			session.getTransaction().commit();
@@ -38,7 +38,7 @@ public class DeleteStudentDemo {
 			session = factory.getCurrentSession();
             session.beginTransaction();
 			
-			System.out.println("deletting student who have first name saw and last name ream ...");
+			System.out.println("deleting student who have first name saw and last name ream ...");
             session.createQuery("delete from Student s where s.firstName = 'saw' and s.lastName = 'ream' ")
                    .executeUpdate();
 			
